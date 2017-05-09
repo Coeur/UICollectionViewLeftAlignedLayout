@@ -1,8 +1,8 @@
 {
   "name": "UICollectionViewLeftAlignedLayout",
-  "version": "0.0.3",
-  "summary": "A layout for UICollectionView that aligns the cells to the left ",
-  "description": "                   A `UICollectionViewLayout` implementation that aligns the cells to the left.\n\n                   It uses `UICollectionViewFlowLayout` under the hood.\n",
+  "version": "2.0.0",
+  "summary": "A layout for UICollectionView that aligns the cells to the left",
+  "description": "A `UICollectionViewLayout` implementation that aligns the cells to the left.\n\nIt uses `UICollectionViewFlowLayout` under the hood.",
   "homepage": "https://github.com/mokagio/UICollectionViewLeftAlignedLayout",
   "screenshots": "https://raw.githubusercontent.com/mokagio/UICollectionViewLeftAlignedLayout/master/screenshot.png",
   "license": {
@@ -14,12 +14,11 @@
   },
   "social_media_url": "http://twitter.com/mokagio",
   "platforms": {
-    "ios": "6.0"
+    "ios": "8.0"
   },
   "source": {
-    "git": "https://github.com/mokagio/UICollectionViewLeftAlignedLayout.git",
-    "tag": "0.0.3"
+    "git": "https://github.com/coeur/UICollectionViewLeftAlignedLayout.git",
+    "tag": "2.0.0"
   },
-  "source_files": "UICollectionViewLeftAlignedLayout",
-  "requires_arc": true
+  "source_files": "UICollectionViewLeftAlignedLayout/*.swift"
 }
