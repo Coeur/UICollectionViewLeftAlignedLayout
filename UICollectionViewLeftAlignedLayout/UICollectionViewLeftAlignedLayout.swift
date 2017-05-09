@@ -20,35 +20,21 @@
 
 import UIKit
 
-extension UICollectionViewLayoutAttributes {
-    func leftAlignFrame(withSectionInset sectionInset: UIEdgeInsets) {
-        frame.origin.x = sectionInset.left
-    }
-}
-
 /**
  *  Simple UICollectionViewFlowLayout that aligns the cells to the left rather than justify them
  *
- *  Based on http://stackoverflow.com/questions/13017257/how-do-you-determine-spacing-between-cells-in-uicollectionview-flowlayout
+ *  Based on https://stackoverflow.com/questions/13017257/how-do-you-determine-spacing-between-cells-in-uicollectionview-flowlayout
  */
 open class UICollectionViewLeftAlignedLayout: UICollectionViewFlowLayout {
     open override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        let originalAttributes = super.layoutAttributesForElements(in: rect)
-        var updatedAttributes = originalAttributes
-        for attributes in originalAttributes ?? [] where attributes.representedElementKind == nil {
-            let index = updatedAttributes!.index(of: attributes)!
-            updatedAttributes![index] = layoutAttributesForItem(at: attributes.indexPath)!
-        }
-        return updatedAttributes
+        return super.layoutAttributesForElements(in: rect)?.map { $0.representedElementKind == nil ? layoutAttributesForItem(at: $0.indexPath)! : $0 }
     }
     
     open override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-        guard let currentItemAttributes = super.layoutAttributesForItem(at: indexPath)?.copy() as? UICollectionViewLayoutAttributes else {
+        guard let currentItemAttributes = super.layoutAttributesForItem(at: indexPath)?.copy() as? UICollectionViewLayoutAttributes,
+            let collectionView = self.collectionView else {
+            // should never happen
             return nil
-        }
-        
-        guard let collectionView = self.collectionView else {
-            return currentItemAttributes
         }
         
         let sectionInset = evaluatedSectionInsetForSection(at: indexPath.section)
@@ -59,14 +45,13 @@ open class UICollectionViewLeftAlignedLayout: UICollectionViewFlowLayout {
         }
         
         guard let previousFrame = layoutAttributesForItem(at: IndexPath(item: indexPath.item - 1, section: indexPath.section))?.frame else {
-            return currentItemAttributes
+            // should never happen
+            return nil
         }
-        
-        let layoutWidth = collectionView.frame.width - sectionInset.left - sectionInset.right
         
         // if the current frame, once left aligned to the left and stretched to the full collection view
         // widht intersects the previous frame then they are on the same line
-        guard previousFrame.intersects(CGRect(x: sectionInset.left, y: currentItemAttributes.frame.origin.y, width: layoutWidth, height: currentItemAttributes.frame.size.height)) else {
+        guard previousFrame.intersects(CGRect(x: sectionInset.left, y: currentItemAttributes.frame.origin.y, width: collectionView.frame.width - sectionInset.left - sectionInset.right, height: currentItemAttributes.frame.size.height)) else {
             // make sure the first item on a line is left aligned
             currentItemAttributes.leftAlignFrame(withSectionInset: sectionInset)
             return currentItemAttributes
@@ -82,5 +67,11 @@ open class UICollectionViewLeftAlignedLayout: UICollectionViewFlowLayout {
     
     func evaluatedSectionInsetForSection(at index: NSInteger) -> UIEdgeInsets {
         return (collectionView?.delegate as? UICollectionViewDelegateFlowLayout)?.collectionView?(collectionView!, layout: self, insetForSectionAt: index) ?? sectionInset
+    }
+}
+
+extension UICollectionViewLayoutAttributes {
+    func leftAlignFrame(withSectionInset sectionInset: UIEdgeInsets) {
+        frame.origin.x = sectionInset.left
     }
 }
