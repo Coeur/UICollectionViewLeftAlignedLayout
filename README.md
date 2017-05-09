@@ -10,7 +10,7 @@ _Check out the twin project [`UICollectionViewRightAlignedLayout`](https://githu
 ## Installation with CocoaPods
 
 ```ruby
-platform :ios, '6.0'
+platform :ios, '8.0'
 
 pod 'UICollectionViewLeftAlignedLayout'
 ```
@@ -35,7 +35,7 @@ For those of you who like consistency there is an `UICollectionViewDelegateLeftA
 
 ## License
 
-`UICollectionViewLeftAlignedLayout` is released under the [MIT license](https://github.com/mokagio/UICollectionViewLeftAlignedLayout/blob/master/LICENSE).
+`UICollectionViewLeftAlignedLayout` is released under the [MIT license](https://github.com/coeur/UICollectionViewLeftAlignedLayout/blob/master/LICENSE).
 
 ---
 
