@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ".."
 
 SPEC CHECKSUMS:
-  UICollectionViewLeftAlignedLayout: 328de995c2a2b0fbe500d06fac17bf47cb81ea73
+  UICollectionViewLeftAlignedLayout: a417bf16de9be3a762675a5620e328f155b2b7f4
 
 PODFILE CHECKSUM: 7595a490e2b9616a6dd193c631f2b38a0567d170
 

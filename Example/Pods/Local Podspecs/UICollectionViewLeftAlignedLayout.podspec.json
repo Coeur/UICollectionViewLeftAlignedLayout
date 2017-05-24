@@ -4,7 +4,7 @@
   "summary": "A layout for UICollectionView that aligns the cells to the left",
   "description": "A `UICollectionViewLayout` implementation that aligns the cells to the left.\n\nIt uses `UICollectionViewFlowLayout` under the hood.",
   "homepage": "https://github.com/mokagio/UICollectionViewLeftAlignedLayout",
-  "screenshots": "https://raw.githubusercontent.com/mokagio/UICollectionViewLeftAlignedLayout/master/screenshot.png",
+  "screenshots": "https://raw.githubusercontent.com/coeur/UICollectionViewLeftAlignedLayout/master/screenshot.png",
   "license": {
     "type": "MIT",
     "file": "LICENSE"

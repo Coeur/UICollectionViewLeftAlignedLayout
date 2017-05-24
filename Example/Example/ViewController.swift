@@ -9,6 +9,7 @@
 import UIKit
 
 let kCellIdentifier = "CellIdentifier"
+let kScrollDirectionIsHorizontal = false
 let kShouldRefresh = false
 
 class ViewController: UIViewController {
@@ -22,7 +23,12 @@ class ViewController: UIViewController {
         
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kCellIdentifier)
         
-        if (kShouldRefresh) {
+        if kScrollDirectionIsHorizontal {
+            let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout
+            flowLayout?.scrollDirection = .horizontal
+        }
+        
+        if kShouldRefresh {
             timer = Timer.scheduledTimer(timeInterval: 0.5, target: self.collectionView, selector: #selector(UICollectionView.reloadData), userInfo: nil, repeats: true)
             RunLoop.main.add(timer!, forMode: .defaultRunLoopMode)
         }
@@ -50,12 +56,15 @@ extension ViewController: UICollectionViewDataSource {
         cell.contentView.layer.borderWidth = 2
         return cell
     }
-
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: CGFloat((arc4random() % 120) + 60), height: 60)
+        if kScrollDirectionIsHorizontal {
+            return CGSize(width: 60, height: CGFloat((arc4random() % 120) + 60))
+        } else {
+            return CGSize(width: CGFloat((arc4random() % 120) + 60), height: 60)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

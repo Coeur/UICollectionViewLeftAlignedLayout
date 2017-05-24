@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wsf-0p-q86">
-                                <rect key="frame" x="8" y="115" width="359" height="552"/>
+                                <rect key="frame" x="0.0" y="115" width="375" height="552"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewLayout key="collectionViewLayout" id="ULT-sp-tpR" customClass="UICollectionViewLeftAlignedLayout" customModule="UICollectionViewLeftAlignedLayout"/>
                                 <cells/>
@@ -46,9 +46,9 @@
                             <constraint firstAttribute="bottom" secondItem="wsf-0p-q86" secondAttribute="bottom" id="JAR-6R-Jqa"/>
                             <constraint firstAttribute="trailing" secondItem="cJD-vE-RY3" secondAttribute="trailing" constant="8" id="Mee-8R-295"/>
                             <constraint firstItem="cJD-vE-RY3" firstAttribute="top" secondItem="AYu-oZ-git" secondAttribute="top" constant="8" id="Nkw-l1-2vz"/>
-                            <constraint firstItem="wsf-0p-q86" firstAttribute="leading" secondItem="AYu-oZ-git" secondAttribute="leading" constant="8" id="SAz-Br-drs"/>
+                            <constraint firstItem="wsf-0p-q86" firstAttribute="leading" secondItem="AYu-oZ-git" secondAttribute="leading" id="SAz-Br-drs"/>
                             <constraint firstItem="wsf-0p-q86" firstAttribute="top" secondItem="cJD-vE-RY3" secondAttribute="bottom" id="mfQ-7r-OzO"/>
-                            <constraint firstAttribute="trailing" secondItem="wsf-0p-q86" secondAttribute="trailing" constant="8" id="miT-PE-Bkm"/>
+                            <constraint firstAttribute="trailing" secondItem="wsf-0p-q86" secondAttribute="trailing" id="miT-PE-Bkm"/>
                             <constraint firstItem="cJD-vE-RY3" firstAttribute="leading" secondItem="AYu-oZ-git" secondAttribute="leading" constant="8" id="y6p-xG-tqc"/>
                         </constraints>
                     </view>

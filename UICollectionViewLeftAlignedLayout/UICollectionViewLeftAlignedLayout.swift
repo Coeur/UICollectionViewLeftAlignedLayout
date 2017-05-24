@@ -32,32 +32,35 @@ open class UICollectionViewLeftAlignedLayout: UICollectionViewFlowLayout {
     
     open override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         guard let currentItemAttributes = super.layoutAttributesForItem(at: indexPath)?.copy() as? UICollectionViewLayoutAttributes,
-            let collectionView = self.collectionView else {
+            collectionView != nil else {
             // should never happen
             return nil
         }
         
         let sectionInset = evaluatedSectionInsetForSection(at: indexPath.section)
         
-        guard indexPath.item != 0 else {
-            currentItemAttributes.leftAlignFrame(withSectionInset: sectionInset)
-            return currentItemAttributes
+        // if the current frame, once stretched to the full row or column intersects the previous frame then they are on the same row or column
+        if scrollDirection == .vertical {
+            if indexPath.item != 0,
+                let previousFrame = layoutAttributesForItem(at: IndexPath(item: indexPath.item - 1, section: indexPath.section))?.frame,
+                // if one frame, once stretched to a full row intersects the other frame then they are on the same row
+                currentItemAttributes.frame.intersects(CGRect(x: -.infinity, y: previousFrame.origin.y, width: .infinity, height: previousFrame.size.height)) {
+                currentItemAttributes.frame.origin.x = previousFrame.origin.x + previousFrame.size.width + evaluatedMinimumInteritemSpacingForSection(at: indexPath.section)
+            } else {
+                // the first item on a line or column is left or top aligned
+                currentItemAttributes.frame.origin.x = sectionInset.left
+            }
+        } else {
+            if indexPath.item != 0,
+                let previousFrame = layoutAttributesForItem(at: IndexPath(item: indexPath.item - 1, section: indexPath.section))?.frame,
+                // if one frame, once stretched to a full column intersects the other frame then they are on the same column
+                currentItemAttributes.frame.intersects(CGRect(x: previousFrame.origin.x, y: -.infinity, width: previousFrame.size.width, height: .infinity)) {
+                currentItemAttributes.frame.origin.y = previousFrame.origin.y + previousFrame.size.height + evaluatedMinimumInteritemSpacingForSection(at: indexPath.section)
+            } else {
+                // the first item on a line or column is left or top aligned
+                currentItemAttributes.frame.origin.y = sectionInset.top
+            }
         }
-        
-        guard let previousFrame = layoutAttributesForItem(at: IndexPath(item: indexPath.item - 1, section: indexPath.section))?.frame else {
-            // should never happen
-            return nil
-        }
-        
-        // if the current frame, once left aligned to the left and stretched to the full collection view
-        // widht intersects the previous frame then they are on the same line
-        guard previousFrame.intersects(CGRect(x: sectionInset.left, y: currentItemAttributes.frame.origin.y, width: collectionView.frame.width - sectionInset.left - sectionInset.right, height: currentItemAttributes.frame.size.height)) else {
-            // make sure the first item on a line is left aligned
-            currentItemAttributes.leftAlignFrame(withSectionInset: sectionInset)
-            return currentItemAttributes
-        }
-        
-        currentItemAttributes.frame.origin.x = previousFrame.origin.x + previousFrame.size.width + evaluatedMinimumInteritemSpacingForSection(at: indexPath.section)
         return currentItemAttributes
     }
     
@@ -67,11 +70,5 @@ open class UICollectionViewLeftAlignedLayout: UICollectionViewFlowLayout {
     
     func evaluatedSectionInsetForSection(at index: NSInteger) -> UIEdgeInsets {
         return (collectionView?.delegate as? UICollectionViewDelegateFlowLayout)?.collectionView?(collectionView!, layout: self, insetForSectionAt: index) ?? sectionInset
-    }
-}
-
-extension UICollectionViewLayoutAttributes {
-    func leftAlignFrame(withSectionInset sectionInset: UIEdgeInsets) {
-        frame.origin.x = sectionInset.left
     }
 }

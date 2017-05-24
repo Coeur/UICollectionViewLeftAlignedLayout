@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1EE8B8353A3B316418F598E606CA7A63 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		28CEC73F4FBAC5A474C9B62F0A9646B4 /* UICollectionViewLeftAlignedLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9230A7CD8757262AB54D481D28440429 /* UICollectionViewLeftAlignedLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28CEC73F4FBAC5A474C9B62F0A9646B4 /* UICollectionViewLeftAlignedLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AD6E27613BD1A179CDB1C4DCE5D7792 /* UICollectionViewLeftAlignedLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		800ED8919C3CBBA2A0CB02ED5F05A5A8 /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 699118D7DDD5F335E4FB8B17DC0F12D2 /* Pods-Example-dummy.m */; };
-		8A3B940A049AC9F9EF9AFF749BA5E7C0 /* UICollectionViewLeftAlignedLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 703314BDF3991AB9DA413760F31727B0 /* UICollectionViewLeftAlignedLayout-dummy.m */; };
+		8A3B940A049AC9F9EF9AFF749BA5E7C0 /* UICollectionViewLeftAlignedLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DC8F5816628B5140C1EB6E74B73684 /* UICollectionViewLeftAlignedLayout-dummy.m */; };
 		B693C5CC5D178561F22176BC9C5B7606 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		C90217AB85A8C6E5B8BC0CC046A40263 /* UICollectionViewLeftAlignedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3F6A77A502132425B5C5141289A6F /* UICollectionViewLeftAlignedLayout.swift */; };
+		C90217AB85A8C6E5B8BC0CC046A40263 /* UICollectionViewLeftAlignedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471B9569F731EC9D2B7C7BD505B341BF /* UICollectionViewLeftAlignedLayout.swift */; };
 		E050137A29121BAB86247EB0B865B17F /* Pods-Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C9BDE82371C83FA9AE91B05F77ACAA36 /* Pods-Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -28,25 +28,25 @@
 
 /* Begin PBXFileReference section */
 		01E6907CF2644EB1CF8E23F708A3DA0B /* Pods-Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-resources.sh"; sourceTree = "<group>"; };
+		0AD6E27613BD1A179CDB1C4DCE5D7792 /* UICollectionViewLeftAlignedLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewLeftAlignedLayout-umbrella.h"; sourceTree = "<group>"; };
 		119072C64A19799964E1620D83F514FB /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
 		149054C495E8EC590CAB4C524133016F /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		1E92754D04AAAD35ECDD8BE64DF1F3C3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20C03C42AE95BC5436031FA828137E33 /* UICollectionViewLeftAlignedLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewLeftAlignedLayout-prefix.pch"; sourceTree = "<group>"; };
 		25448494AC8F5FC21D2AC06F619BE74F /* UICollectionViewLeftAlignedLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UICollectionViewLeftAlignedLayout.framework; path = UICollectionViewLeftAlignedLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DD3F6A77A502132425B5C5141289A6F /* UICollectionViewLeftAlignedLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UICollectionViewLeftAlignedLayout.swift; sourceTree = "<group>"; };
-		458328B8748B3F380D048EE151A7C974 /* UICollectionViewLeftAlignedLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = UICollectionViewLeftAlignedLayout.modulemap; sourceTree = "<group>"; };
-		51147E07D3A15384933825E524870AA6 /* UICollectionViewLeftAlignedLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewLeftAlignedLayout-prefix.pch"; sourceTree = "<group>"; };
+		471B9569F731EC9D2B7C7BD505B341BF /* UICollectionViewLeftAlignedLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UICollectionViewLeftAlignedLayout.swift; sourceTree = "<group>"; };
+		50DC8F5816628B5140C1EB6E74B73684 /* UICollectionViewLeftAlignedLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewLeftAlignedLayout-dummy.m"; sourceTree = "<group>"; };
 		552550F3F912264E5D073F8893691F88 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
+		5E9A48D1C2F55E738BC8C91C279EBD0A /* UICollectionViewLeftAlignedLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICollectionViewLeftAlignedLayout.xcconfig; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		699118D7DDD5F335E4FB8B17DC0F12D2 /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
-		703314BDF3991AB9DA413760F31727B0 /* UICollectionViewLeftAlignedLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewLeftAlignedLayout-dummy.m"; sourceTree = "<group>"; };
 		764D33E23CE6C1111110B04F5CBADADB /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		9230A7CD8757262AB54D481D28440429 /* UICollectionViewLeftAlignedLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewLeftAlignedLayout-umbrella.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A661FECCEBFF9D01869EE3B29C4C1EFF /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BC2D7B026D9127ACBC8C023C101E9107 /* UICollectionViewLeftAlignedLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = UICollectionViewLeftAlignedLayout.modulemap; sourceTree = "<group>"; };
 		C9BDE82371C83FA9AE91B05F77ACAA36 /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
-		D8A6825D9B1FAD65DDBD981305DA25BF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E512A5F985F876750237FD237C3AEEDA /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		E60A876B63610DC63144D37C9AB555D0 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example.framework; path = "Pods-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED395C9F465FDD4D82CF90EDAF34BD1D /* UICollectionViewLeftAlignedLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICollectionViewLeftAlignedLayout.xcconfig; sourceTree = "<group>"; };
 		EFFB74AAA6B2AE8DABF0E88E61E09178 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +70,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E652247C28B6FFBBDC68E752A09A2C0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E92754D04AAAD35ECDD8BE64DF1F3C3 /* Info.plist */,
+				BC2D7B026D9127ACBC8C023C101E9107 /* UICollectionViewLeftAlignedLayout.modulemap */,
+				5E9A48D1C2F55E738BC8C91C279EBD0A /* UICollectionViewLeftAlignedLayout.xcconfig */,
+				50DC8F5816628B5140C1EB6E74B73684 /* UICollectionViewLeftAlignedLayout-dummy.m */,
+				20C03C42AE95BC5436031FA828137E33 /* UICollectionViewLeftAlignedLayout-prefix.pch */,
+				0AD6E27613BD1A179CDB1C4DCE5D7792 /* UICollectionViewLeftAlignedLayout-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/UICollectionViewLeftAlignedLayout";
+			sourceTree = "<group>";
+		};
 		6A4F6A14E3FB951290E4531728B7A461 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,31 +112,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8384A35C723AE4DDE441B22B80511C11 /* UICollectionViewLeftAlignedLayout */ = {
-			isa = PBXGroup;
-			children = (
-				DCCD2216274A4BE8B2AC86DA3D1D91E6 /* Support Files */,
-				B73844259D73A37BCF377EAF7C3CC37A /* UICollectionViewLeftAlignedLayout */,
-			);
-			name = UICollectionViewLeftAlignedLayout;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		9F1BFEC52C9B556CDBB4961E88818997 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8384A35C723AE4DDE441B22B80511C11 /* UICollectionViewLeftAlignedLayout */,
+				BEEFC549CD7F02CF3200841326E79672 /* UICollectionViewLeftAlignedLayout */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		B73844259D73A37BCF377EAF7C3CC37A /* UICollectionViewLeftAlignedLayout */ = {
-			isa = PBXGroup;
-			children = (
-				3DD3F6A77A502132425B5C5141289A6F /* UICollectionViewLeftAlignedLayout.swift */,
-			);
-			name = UICollectionViewLeftAlignedLayout;
-			path = UICollectionViewLeftAlignedLayout;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -133,6 +128,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BEEFC549CD7F02CF3200841326E79672 /* UICollectionViewLeftAlignedLayout */ = {
+			isa = PBXGroup;
+			children = (
+				1E652247C28B6FFBBDC68E752A09A2C0 /* Support Files */,
+				F2B7684B17E100E9826E60B225832AA3 /* UICollectionViewLeftAlignedLayout */,
+			);
+			name = UICollectionViewLeftAlignedLayout;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,18 +146,13 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		DCCD2216274A4BE8B2AC86DA3D1D91E6 /* Support Files */ = {
+		F2B7684B17E100E9826E60B225832AA3 /* UICollectionViewLeftAlignedLayout */ = {
 			isa = PBXGroup;
 			children = (
-				D8A6825D9B1FAD65DDBD981305DA25BF /* Info.plist */,
-				458328B8748B3F380D048EE151A7C974 /* UICollectionViewLeftAlignedLayout.modulemap */,
-				ED395C9F465FDD4D82CF90EDAF34BD1D /* UICollectionViewLeftAlignedLayout.xcconfig */,
-				703314BDF3991AB9DA413760F31727B0 /* UICollectionViewLeftAlignedLayout-dummy.m */,
-				51147E07D3A15384933825E524870AA6 /* UICollectionViewLeftAlignedLayout-prefix.pch */,
-				9230A7CD8757262AB54D481D28440429 /* UICollectionViewLeftAlignedLayout-umbrella.h */,
+				471B9569F731EC9D2B7C7BD505B341BF /* UICollectionViewLeftAlignedLayout.swift */,
 			);
-			name = "Support Files";
-			path = "ExampleSwift/Pods/Target Support Files/UICollectionViewLeftAlignedLayout";
+			name = UICollectionViewLeftAlignedLayout;
+			path = UICollectionViewLeftAlignedLayout;
 			sourceTree = "<group>";
 		};
 		FE9811ABEB5931E154211FCA14B78350 /* Pods-Example */ = {
@@ -371,7 +371,7 @@
 		};
 		719E602207CD8C1594DCFB64D2807145 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED395C9F465FDD4D82CF90EDAF34BD1D /* UICollectionViewLeftAlignedLayout.xcconfig */;
+			baseConfigurationReference = 5E9A48D1C2F55E738BC8C91C279EBD0A /* UICollectionViewLeftAlignedLayout.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -445,7 +445,7 @@
 		};
 		B95DBAA589F7CF2098659B70B52055F9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED395C9F465FDD4D82CF90EDAF34BD1D /* UICollectionViewLeftAlignedLayout.xcconfig */;
+			baseConfigurationReference = 5E9A48D1C2F55E738BC8C91C279EBD0A /* UICollectionViewLeftAlignedLayout.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
