@@ -21,7 +21,7 @@
 import UIKit
 
 /**
- *  Simple UICollectionViewFlowLayout that aligns the cells to the left rather than justify them
+ *  Simple UICollectionViewFlowLayout that aligns the cells to the left (or top) rather than justify them
  *
  *  Based on https://stackoverflow.com/questions/13017257/how-do-you-determine-spacing-between-cells-in-uicollectionview-flowlayout
  */
@@ -36,29 +36,27 @@ open class UICollectionViewLeftAlignedLayout: UICollectionViewFlowLayout {
             // should never happen
             return nil
         }
-        
-        let sectionInset = evaluatedSectionInsetForSection(at: indexPath.section)
-        
-        // if the current frame, once stretched to the full row or column intersects the previous frame then they are on the same row or column
         if scrollDirection == .vertical {
+            // if the current frame, once stretched to the full row intersects the previous frame then they are on the same row
             if indexPath.item != 0,
                 let previousFrame = layoutAttributesForItem(at: IndexPath(item: indexPath.item - 1, section: indexPath.section))?.frame,
-                // if one frame, once stretched to a full row intersects the other frame then they are on the same row
                 currentItemAttributes.frame.intersects(CGRect(x: -.infinity, y: previousFrame.origin.y, width: .infinity, height: previousFrame.size.height)) {
+                // the next item on a row
                 currentItemAttributes.frame.origin.x = previousFrame.origin.x + previousFrame.size.width + evaluatedMinimumInteritemSpacingForSection(at: indexPath.section)
             } else {
-                // the first item on a line or column is left or top aligned
-                currentItemAttributes.frame.origin.x = sectionInset.left
+                // the first item on a row is section aligned
+                currentItemAttributes.frame.origin.x = evaluatedSectionInsetForSection(at: indexPath.section).left
             }
         } else {
+            // if the current frame, once stretched to the full column intersects the previous frame then they are on the same column
             if indexPath.item != 0,
                 let previousFrame = layoutAttributesForItem(at: IndexPath(item: indexPath.item - 1, section: indexPath.section))?.frame,
-                // if one frame, once stretched to a full column intersects the other frame then they are on the same column
                 currentItemAttributes.frame.intersects(CGRect(x: previousFrame.origin.x, y: -.infinity, width: previousFrame.size.width, height: .infinity)) {
+                // the next item on a column
                 currentItemAttributes.frame.origin.y = previousFrame.origin.y + previousFrame.size.height + evaluatedMinimumInteritemSpacingForSection(at: indexPath.section)
             } else {
-                // the first item on a line or column is left or top aligned
-                currentItemAttributes.frame.origin.y = sectionInset.top
+                // the first item on a column is section aligned
+                currentItemAttributes.frame.origin.y = evaluatedSectionInsetForSection(at: indexPath.section).top
             }
         }
         return currentItemAttributes

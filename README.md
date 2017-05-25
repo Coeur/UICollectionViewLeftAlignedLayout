@@ -1,7 +1,7 @@
 UICollectionView Left Aligned Layout
 ====================================
 
-A `UICollectionViewLayout` implementation that aligns the cells to the left. 
+A `UICollectionViewLayout` implementation that aligns the cells to the left or top. 
 
 <img src="https://raw.githubusercontent.com/mokagio/UICollectionViewLeftAlignedLayout/master/screenshot.png" />
 
